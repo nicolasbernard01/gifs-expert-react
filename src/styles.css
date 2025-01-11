@@ -1,0 +1,123 @@
+* {
+  font-family: 'Helvetica', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 60px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 15px 20px; /* Aumenta el padding para mayor comodidad */
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #6200ea; /* Color de fondo moderno */
+  color: white; /* Texto en blanco */
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para dar efecto de elevación */
+  transition: all 0.3s ease; /* Transiciones suaves para hover y active */
+}
+
+button:hover {
+  background-color: #7e3ff2; /* Fondo ligeramente más claro al pasar el mouse */
+  transform: translateY(-3px); /* Levanta el botón ligeramente */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+}
+
+button:active {
+  transform: translateY(0px); /* El botón vuelve a su lugar */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra original */
+  background-color: #4d00c1; /* Color más oscuro para el estado activo */
+}
+
+h1 {
+  font-size: 45px;
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 25px;
+  margin-top: 25px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input {
+  display: block;
+  margin: 0 auto 20px auto;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid rgb(97, 32, 158);
+  color: black;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 10px 15px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.card-grid {
+  display: flex; /* Flexbox para alinear las tarjetas en una fila */
+  flex-wrap: wrap; /* Permite que las tarjetas pasen a la siguiente fila si no hay espacio */
+  justify-content: center; /* Centra las tarjetas horizontalmente */
+  gap: 20px; /* Espaciado entre las tarjetas */
+  padding: 20px;
+  background-color: var(--category-color, #f9f9f9); /* Fondo que cambiará dinámicamente */
+  border-radius: 10px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Asegura que los elementos se distribuyan verticalmente */
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.1);
+  width: 250px; /* Todas las tarjetas tienen el mismo ancho */
+  height: 300px; /* Todas las tarjetas tienen la misma altura */
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px; /* Agrega un pequeño espacio interno */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 180px; /* Fija la altura de las imágenes */
+  object-fit: cover; /* Asegura que las imágenes no se deformen */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.card p {
+  color: black;
+  font-size: 1.2rem;
+  padding: 10px;
+  margin: 0; /* Elimina el margen adicional */
+  text-align: center;
+  flex-shrink: 0; /* Asegura que el texto no se reduzca en tamaño */
+}
+
+.button-delete-category {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+}
